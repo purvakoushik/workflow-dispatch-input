@@ -26,11 +26,11 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run addition.py
+      - name: Run additional.py                                                                            
         run: |
           python addition.py
   multiply:
-  if: ${{ always() }}
+    if: ${{ always() }}
     needs: add
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
