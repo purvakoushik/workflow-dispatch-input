@@ -21,8 +21,8 @@ on:
         description: Second input for addition and multiplication
 
 env:
-  addfile: additon.py
-  mulfile: multiple.py
+  addfile: addition.py
+  mulfile: multiply.py
   firstnum: ${{github.event.inputs.input1}}
   secondnum: ${{github.event.inputs.input2}}
 
