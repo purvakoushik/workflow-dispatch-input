@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       input1:
-        descripetion: First input for addition and multiplication
+        description: First input for addition and multiplication
         required: true
 
       input2:
@@ -25,7 +25,6 @@ env:
   mulfile: multiple.py
   firstnum: ${{github.event.inputs.input1}}
   secondnum: ${{github.event.inputs.input2}}
-
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
