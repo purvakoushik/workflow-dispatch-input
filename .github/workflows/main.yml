@@ -46,7 +46,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run addtion.py and multiply.py
-        if: ${{variable}}=="yes"
+        if: '$variable =="yes"'
         run: |
           python $addfile $firstnum $secondnum
           python $mulfile $firstnum $secondnum
