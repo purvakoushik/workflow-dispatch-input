@@ -19,12 +19,18 @@ on:
 
       input2:
         description: Second input for addition and multiplication
+        required: true
+        
+      input3:
+        description: yes or no
+        required: true
 
 env:
   addfile: addition.py
   mulfile: multiply.py
   firstnum: ${{github.event.inputs.input1}}
   secondnum: ${{github.event.inputs.input2}}
+  variable: ${{github.event.inputs.input3}}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -40,6 +46,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run addtion.py and multiply.py
+        if: ${{variable}}=="yes"
         run: |
           python $addfile $firstnum $secondnum
           python $mulfile $firstnum $secondnum
