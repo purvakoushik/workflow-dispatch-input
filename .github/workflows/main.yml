@@ -30,7 +30,7 @@ env:
   mulfile: multiply.py
   firstnum: ${{github.event.inputs.input1}}
   secondnum: ${{github.event.inputs.input2}}
-  variable: ${{github.event.inputs.input3}}
+  variables: ${{github.event.inputs.input3}}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -46,7 +46,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run addtion.py and multiply.py
-        if: '$variable =="yes"'
+        if: ${{ github.event.inputs.variables == 'yes' }}
         run: |
           python $addfile $firstnum $secondnum
           python $mulfile $firstnum $secondnum
