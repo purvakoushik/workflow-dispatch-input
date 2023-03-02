@@ -1,0 +1,21 @@
+name: workflow-test
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "name of the person"
+        required: true
+        default: "purva"
+      country:
+        description: "country of person"
+        required: false
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "hi ${{github.event.inputs.name}}"
+          echo "your country is ${{github.event.inputs.country}}"
+          echo "${{gtihub.event}}"
