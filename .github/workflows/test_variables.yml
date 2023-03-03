@@ -15,5 +15,5 @@ jobs:
     steps:
       - name: run variables
         run: |
-          echo "hello $user_name !"
-          echo "welcome to $demo_name !"
+          echo "hello ${{ env.user_name }} !"
+          echo "welcome to ${{ env.demo_name }} !"
