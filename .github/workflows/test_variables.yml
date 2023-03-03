@@ -3,7 +3,7 @@ name: test-variables
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 env:
   user_name: "purva"
