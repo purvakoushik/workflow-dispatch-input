@@ -17,3 +17,5 @@ jobs:
         run: |
           echo "hello ${{ env.user_name }} !"
           echo "welcome to ${{ env.demo_name }} !"
+          echo "hello $user_name !"
+          echo "wrlcome to $demo_name"
