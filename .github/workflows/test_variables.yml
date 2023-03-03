@@ -1,0 +1,19 @@
+name: test-variables
+
+on:
+  push:
+    branches:
+      - "master"
+
+env:
+  user_name: "purva"
+  demo_name: "variable_demo"
+
+jobs:
+  test_variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run variables
+        run: |
+          echo "hello $user_name !"
+          echo "welcome to $demo_name !"
